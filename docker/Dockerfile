@@ -9,6 +9,8 @@ COPY install-composer.sh install-composer.sh
 RUN chmod 0777 "./install-composer.sh"
 RUN "./install-composer.sh"
 
+ADD . profiles/catshop
+
 RUN composer config minimum-stability dev && \
     composer require "drupal/commerce" && \
     composer require "drush/drush" &&  \
