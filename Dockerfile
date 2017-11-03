@@ -9,7 +9,7 @@ COPY install-composer.sh install-composer.sh
 RUN chmod 0777 "./install-composer.sh"
 RUN "./install-composer.sh"
 
-
+RUN usermod -s /bin/bash www-data
 USER www-data
 
 ADD . profiles/catshop
