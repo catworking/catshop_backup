@@ -1,6 +1,6 @@
 core: 8.x
 type: theme
-base theme: Bartik
+base theme: bartik
 
 name: Catshop theme
 description: Catshop main theme.
