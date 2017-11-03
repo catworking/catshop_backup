@@ -12,10 +12,10 @@ RUN "./install-composer.sh"
 ADD . profiles/catshop
 
 RUN composer config minimum-stability dev && \
-    composer require "drupal/commerce" && \
-    composer require "drush/drush" &&  \
-    "./vendor/bin/drush" -y site-install catshop \
-    install_configure_form.update_status_module='array(FALSE,FALSE)' \
+    composer require "drupal/commerce" "drush/drush"
+RUN ./vendor/bin/drush -y site-install catshop \
+    install_configure_form.enable_update_status_module=NULL \
+    install_configure_form.enable_update_status_emails=NULL \
      --db-url="sqlite://sites/default/files/.ht.sqlite" \
      --account-name=admin --account-pass=123 --account-mail=164713332@qq.com \
      --site-name=测试网站 --locale=zh-hans
