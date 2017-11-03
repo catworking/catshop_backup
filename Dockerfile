@@ -16,7 +16,7 @@ RUN composer config minimum-stability dev && \
     composer require "drush/drush" &&  \
     "./vendor/bin/drush" -y site-install catshop \
      --db-url="sqlite://sites/default/files/.ht.sqlite" \
-     --account-name=admin --account-pass=123 --account-mail=164713332@qq.com \
+     --account-name=admin --account-pass=123 \
      --site-name=测试网站 --locale=zh-hans
 
 RUN composer config repo.packagist composer "https://packagist.phpcomposer.com"
