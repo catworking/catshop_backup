@@ -10,7 +10,7 @@ RUN chmod 0777 "./install-composer.sh"
 RUN "./install-composer.sh"
 
 RUN composer config minimum-stability dev && \
-    composer require drupal/commerce drush/drush drupal/default_content@dev
+    composer require "drupal/commerce" "drush/drush" "drupal/default_content:^1.x-dev"
 
 RUN usermod -s /bin/bash www-data
 USER www-data
