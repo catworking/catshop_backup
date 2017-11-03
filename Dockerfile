@@ -9,6 +9,9 @@ COPY install-composer.sh install-composer.sh
 RUN chmod 0777 "./install-composer.sh"
 RUN "./install-composer.sh"
 
+
+USER www-data
+
 ADD . profiles/catshop
 
 RUN composer config minimum-stability dev && \
@@ -21,3 +24,5 @@ RUN ./vendor/bin/drush -y site-install catshop \
      --site-name=测试网站 --locale=zh-hans
 
 RUN composer config repo.packagist composer "https://packagist.phpcomposer.com"
+
+USER root
