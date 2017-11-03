@@ -14,7 +14,7 @@ ADD . profiles/catshop
 RUN composer config minimum-stability dev && \
     composer require "drupal/commerce" && \
     composer require "drush/drush" &&  \
-    "./vendor/bin/drush" -y site-install catshop \
+    ./vendor/bin/drush -y site-install catshop \
      --db-url="sqlite://sites/default/files/.ht.sqlite" \
      --account-name=admin --account-pass=123 \
      --site-name=测试网站 --locale=zh-hans
