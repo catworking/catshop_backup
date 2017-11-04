@@ -1,5 +1,5 @@
-name: 'CatShop Frontpage'
-description: 'Provide a page for site home.'
+name: 'CatShop Demo data'
+description: 'Provide default demo data for your CatShop site.'
 type: module
 dependencies:
   - node

@@ -1,5 +1,5 @@
-name: 'Catshop RESTful API'
-description: 'Previde RESTful API for extra apps.'
+name: 'CatShop RESTful API'
+description: 'Provide RESTful API for extra apps.'
 type: module
 dependencies:
   - rest
