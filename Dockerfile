@@ -10,11 +10,11 @@ RUN chmod 0777 "./install-composer.sh"
 RUN "./install-composer.sh"
 
 RUN composer config minimum-stability dev && \
-    composer require "drupal/commerce" "drupal/devel" "drupal/default_content:1.x-dev" "drush/drush"
+    composer require "drupal/commerce" "drupal/devel" "drupal/default_content" "drush/drush"
 
 RUN wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \
     chmod +x drush.phar && \
-    mv drush.phar /usr/local/bin/drush \
+    mv drush.phar /usr/local/bin/drush && \
     drush self-update
 
 RUN usermod -s /bin/bash www-data
