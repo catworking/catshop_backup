@@ -78,6 +78,7 @@ dependencies:
   - commerce_payment
   - commerce_promotion
   - default_content
+  - devel
 
   # Custom modules
 
