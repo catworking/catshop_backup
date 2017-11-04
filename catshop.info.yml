@@ -60,6 +60,7 @@ dependencies:
   - automated_cron
 
   - rest
+  - restui
 
   # Contrib modules
   - entity
