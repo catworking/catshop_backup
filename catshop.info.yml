@@ -58,7 +58,7 @@ dependencies:
   - views_ui
   - tour
   - automated_cron
-
+  - base_auth
   - rest
 
   # Contrib modules

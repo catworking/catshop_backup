@@ -1,7 +1,7 @@
 FROM drupal:8.3
 
 RUN apt-get update && apt-get install -y \
-            wget git \
+            wget git sqlite3 \
              && docker-php-ext-install -j$(nproc) bcmath
 
 COPY install-composer.sh install-composer.sh
