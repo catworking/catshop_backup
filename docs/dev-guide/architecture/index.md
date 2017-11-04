@@ -4,6 +4,9 @@
 [Drupal Commerce 2.x](https://drupalcommerce.org)
 
 ## 模块
+Catshop是基于DrupalCommerce的，在其基础上添加了大量实用模块，并提供了一套主题。
+
+### DrupalCommerce 模块
 - [Drupal Commerce Price](https://docs.drupalcommerce.org/commerce2/developer-guide/core/formatting-prices) 
   提供货币的管理功能。
 - [Drupal Commerce Store](https://docs.drupalcommerce.org/commerce2/developer-guide/stores) 
@@ -20,3 +23,7 @@
   提供货币结算（支付）功能。
 - [Drupal Commerce Promotion](https://docs.drupalcommerce.org/commerce2/developer-guide/promotions) 
   提供了基本的促销功能。
+  
+### Catshop 模块
+- Catshop Frontpage 提供商城主页相关功能
+- Catshop RESTful API 提供了RESTFul API
