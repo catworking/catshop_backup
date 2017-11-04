@@ -18,6 +18,7 @@ USER www-data
 ADD . profiles/catshop
 
 RUN ./vendor/bin/drush -y site-install catshop \
+    install_configure_form.site_default_country=CN \
     install_configure_form.enable_update_status_module=NULL \
     install_configure_form.enable_update_status_emails=NULL \
      --db-url="sqlite://sites/default/files/.ht.sqlite" \
