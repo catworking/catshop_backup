@@ -59,6 +59,8 @@ dependencies:
   - tour
   - automated_cron
 
+  - rest
+
   # Contrib modules
   - entity
   - entity_reference_revisions
