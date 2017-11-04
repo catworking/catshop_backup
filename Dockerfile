@@ -12,12 +12,17 @@ RUN "./install-composer.sh"
 RUN composer config minimum-stability dev && \
     composer require "drupal/commerce" "drupal/devel" "drupal/default_content:1.x-dev" "drush/drush"
 
+RUN wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.4.2/drush.phar && \
+    chmod +x drush.phar && \
+    mv drush.phar /usr/local/bin/drush \
+    drush self-update
+
 RUN usermod -s /bin/bash www-data
 USER www-data
 
 ADD . profiles/catshop
 
-RUN ./vendor/bin/drush -y site-install catshop \
+RUN drush -y site-install catshop \
     install_configure_form.site_default_country=CN \
     install_configure_form.site_default_timezone='Asia/Hong_Kong' \
     install_configure_form.enable_update_status_module=NULL \
