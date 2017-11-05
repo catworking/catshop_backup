@@ -7,17 +7,21 @@ description: Catshop main theme.
 package: 'Catshop'
 
 regions:
-  # 页眉 页底
+  # 页顶 页底 （不能放置block，在page级）
   page_top: 'Page top'
   page_bottom: 'Page bottom'
 
-  # 页头 主菜单 页脚
+  # 页头 主菜单 副菜单
+  secondary_menu: 'Secondary menu'
   header: Header
   primary_menu: 'Primary menu'
+
+  # 页脚
   footer_first: 'Footer first'
   footer_second: 'Footer second'
   footer_third: 'Footer third'
   footer_fourth: 'Footer fourth'
+  footer_fifth: 'Footer fifth'
 
   # 正文区
   content: Content
